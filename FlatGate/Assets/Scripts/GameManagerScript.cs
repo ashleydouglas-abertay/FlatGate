@@ -98,4 +98,10 @@ public class GameManagerScript : MonoBehaviour
         // Set ID to Default
         targetID = 0;
     }
+
+    // gets position
+    public Vector3 getPos()
+    {
+        return transform.position;
+    }
 }

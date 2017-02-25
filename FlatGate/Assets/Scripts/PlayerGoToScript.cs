@@ -66,4 +66,10 @@ public class PlayerGoToScript : MonoBehaviour
     {
         targetPos = newTargetPos;
     }
+
+    // Gets position
+    public Vector3 getPos()
+    {
+        return transform.position;
+    }
 }
