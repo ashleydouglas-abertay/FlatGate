@@ -82,6 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManagerScript.cs" />
+    <Compile Include="Assets\Scripts\InteractObjectScript.cs" />
+    <Compile Include="Assets\Scripts\InteractionManagerScript.cs" />
     <Compile Include="Assets\Scripts\PlayerGoToScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

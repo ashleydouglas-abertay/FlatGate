@@ -11,7 +11,6 @@ public class PlayerGoToScript : MonoBehaviour
     private Vector3 moveVelo = new Vector3(0, 0, 0);
     private float momentum = 0;
 
-    public Vector3 ForcedTargetPos;
     private Vector3 currPos;
     private Vector3 targetPos;
 
@@ -24,15 +23,11 @@ public class PlayerGoToScript : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-        // DEBUGINFO
-        targetPos = ForcedTargetPos;
-        // END
-
         // Set current position
         currPos = transform.position;
 
         // Checks to see if current position is at target
-        if (currPos.x <= targetPos.x - 0.5 || currPos.x >= targetPos.x + 0.5)
+        if (currPos.x <= targetPos.x - 0.25 || currPos.x >= targetPos.x + 0.25)
         {
             // Work out movement needed
             moveVelo.x = targetPos.x - currPos.x;
@@ -70,6 +65,5 @@ public class PlayerGoToScript : MonoBehaviour
     public void SetTargetPos(Vector3 newTargetPos)
     {
         targetPos = newTargetPos;
-        Debug.Log("Target Changed");
     }
 }
